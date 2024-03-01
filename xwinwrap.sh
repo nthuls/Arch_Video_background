@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Ask the user to select a video file
+VIDEO_PATH=$(zenity --file-selection --title="Select a Video" --file-filter="*.mp4 *.mkv *.webm")
+
+# Check if the user cancelled the dialog
+if [ -z "$VIDEO_PATH" ]; then
+  zenity --error --text="No video selected. Exiting..."
+  exit 1
+fi
+
 # Directory where IPC sockets will be stored
 ipc_dir="/tmp/mpv_sockets"
 mkdir -p "$ipc_dir"
@@ -23,7 +32,7 @@ start_video_on_monitor() {
   # Start xwinwrap with mpv for the monitor
   xwinwrap -ni -ov -g ${width}x${height}+0+0 -- mpv -wid WID --loop=inf --no-audio \
            --input-ipc-server="$ipc_socket_path" \
-           --vf=scale=${width}:${height} /home/nthuli/Pictures/xwinwrap_video/GT3.mp4 &
+           --vf=scale=${width}:${height} "$VIDEO_PATH" &
 }
 
 # Detect and handle each connected monitor
