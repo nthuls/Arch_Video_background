@@ -21,7 +21,7 @@ To run without output use:
 nohup ./xwinwrap.sh &
 ```
 Running in Background: 
-  After integrating these changes, use nohup ./xwinwrap.sh & to run your script in the background.
+  After integrating these changes, use ```nohup ./xwinwrap.sh & ```to run your script in the background.
 
 Stopping the Script: 
 
