@@ -1,11 +1,11 @@
-'''
+```bash
 
 BOTH WORK
 sudo systemctl start xwinwrap.service
 OR
 xwinwrap.sh
 
-'''
+```
 
 # Arch_Video_background
 
