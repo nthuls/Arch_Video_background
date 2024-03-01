@@ -1,0 +1,74 @@
+
+# xwinwrap with mpv Cheat Sheet
+
+## Basic Usage
+Set a video as your desktop background:
+```bash
+xwinwrap -ni -ov -g <WIDTH>x<HEIGHT>+0+0 -- mpv -wid WID --loop=inf /path/to/your/video --no-audio
+```
+
+- `-ni`: Ignore input (mouse, keyboard)
+- `-ov`: Override redirect (necessary for desktop background)
+- `-g`: Geometry, format is WIDTHxHEIGHT+X+Y (e.g., 1920x1080+0+0)
+- `--loop=inf`: Loop video infinitely
+- `--no-audio`: Play video without audio
+
+## Upscaling Video
+Upscale video to a specific resolution (e.g., 2560x1440 for 2K):
+```bash
+xwinwrap -ni -ov -g 2560x1440+0+0 -- mpv -wid WID --vf=scale=2560:1440 --loop=inf /path/to/your/video --no-audio
+```
+
+## Specifying Scaling Algorithms
+Use a specific scaling algorithm (e.g., Lanczos):
+```bash
+xwinwrap -ni -ov -g 2560x1440+0+0 -- mpv -wid WID --vf=scale=2560:1440:flags=lanczos --loop=inf /path/to/your/video --no-audio
+```
+
+## Additional mpv Options
+- `--speed=<SPEED>`: Play video at a specific speed (e.g., 1.5 for 150% speed)
+- `--brightness=<VALUE>`: Adjust video brightness (-100 to 100)
+- `--contrast=<VALUE>`: Adjust video contrast (-100 to 100)
+- `--saturation=<VALUE>`: Adjust video saturation (-100 to 100)
+
+Replace `/path/to/your/video` with the actual path to your video file.
+
+
+#########################################################################################################################################################################
+							FOR A 4K SCREEN WE USE THE COMMAND
+#########################################################################################################################################################################
+
+
+# xwinwrap with mpv Cheat Sheet for 4K Screens
+
+## Basic Usage
+Set a 4K video as your desktop background:
+```bash
+xwinwrap -ni -ov -g 3840x2160+0+0 -- mpv -wid WID --loop=inf /path/to/your/video --no-audio
+```
+
+- `-ni`: Ignore input (mouse, keyboard)
+- `-ov`: Override redirect (necessary for desktop background)
+- `-g 3840x2160+0+0`: Geometry for 4K resolution
+- `--loop=inf`: Loop video infinitely
+- `--no-audio`: Play video without audio
+
+## Upscaling Video to 4K
+Upscale video to 4K resolution (3840x2160):
+```bash
+xwinwrap -ni -ov -g 3840x2160+0+0 -- mpv -wid WID --vf=scale=3840:2160 --loop=inf /path/to/your/video --no-audio
+```
+
+## Specifying Scaling Algorithms for 4K
+Use a specific scaling algorithm for better quality (e.g., Lanczos for 4K upscaling):
+```bash
+xwinwrap -ni -ov -g 3840x2160+0+0 -- mpv -wid WID --vf=scale=3840:2160:flags=lanczos --loop=inf /path/to/your/video --no-audio
+```
+
+## Additional mpv Options for 4K
+- `--speed=<SPEED>`: Play video at a specific speed (e.g., 1.5 for 150% speed)
+- `--brightness=<VALUE>`: Adjust video brightness (-100 to 100)
+- `--contrast=<VALUE>`: Adjust video contrast (-100 to 100)
+- `--saturation=<VALUE>`: Adjust video saturation (-100 to 100)
+
+Replace `/path/to/your/video` with the actual path to your video file.
