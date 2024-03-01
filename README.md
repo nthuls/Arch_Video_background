@@ -30,7 +30,7 @@ Yes, you can grant your user permissions to execute scripts or access files in a
 
 ### Changing File Ownership
 
-If you want your user to own the script, you can change the ownership with `chown`. Replace `nthuli` with your username and `xwinwrap.sh` with the name of your script:
+If you want your user to own the script, you can change the ownership with `chown`. Replace `USER` with your username and `xwinwrap.sh` with the name of your script:
 
 ```bash
 sudo chown USER:USER /usr/local/bin/xwinwrap.sh
@@ -59,7 +59,7 @@ If you want your user to be able to modify scripts in `/usr/local/bin/` without 
 1. **Add your user to a group** (creating a new group if necessary). Here we'll use `staff` as an example:
 
 ```bash
-sudo usermod -a -G staff nthuli
+sudo usermod -a -G staff <username>
 ```
 
 2. **Change the group ownership of the script** or the `/usr/local/bin/` directory:
