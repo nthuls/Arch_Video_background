@@ -33,7 +33,7 @@ Yes, you can grant your user permissions to execute scripts or access files in a
 If you want your user to own the script, you can change the ownership with `chown`. Replace `USER` with your username and `xwinwrap.sh` with the name of your script:
 
 ```bash
-sudo chown USER:USER /usr/local/bin/xwinwrap.sh
+sudo chown <username>:<group> /usr/local/bin/xwinwrap.sh
 ```
 
 This command makes `USER` the owner of `xwinwrap.sh`, allowing full access to the file based on its permissions.
