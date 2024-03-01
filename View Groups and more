@@ -1,0 +1,71 @@
+To check your current user's group memberships and other user-related information on a Linux system, you can use several command-line tools. Here are the most common ones:
+
+### 1. Checking Your Groups
+
+- **`groups` Command**: Simply typing `groups` in the terminal shows all the groups your current user belongs to.
+
+```bash
+groups
+```
+
+- **`id` Command**: The `id` command provides a more detailed view, including your user ID (UID), your primary group ID (GID), and any supplementary groups.
+
+```bash
+id
+```
+
+### 2. Checking Group Membership for Any User
+
+If you want to check the group membership for a specific user, you can use the `groups` or `id` command followed by the username. Replace `nthuli` with the username you're interested in:
+
+```bash
+groups nthuli
+```
+
+Or:
+
+```bash
+id nthuli
+```
+
+### 3. Listing All Users and Their Groups
+
+To see a list of all users and their groups, you can inspect the `/etc/group` file. This file contains all the groups defined on the system, along with the users belonging to each group. You can use the `cat`, `less`, or `grep` command to view or search through this file:
+
+```bash
+cat /etc/group
+```
+
+Or, to search for a specific user or group:
+
+```bash
+grep 'nthuli' /etc/group
+```
+
+### 4. Checking User Information
+
+- **`getent passwd` Command**: To check information about users, including their home directory and default shell, you can use the `getent passwd` command. This can be used to list information for all users or a specific user.
+
+For all users:
+
+```bash
+getent passwd
+```
+
+For a specific user:
+
+```bash
+getent passwd nthuli
+```
+
+### 5. Listing All Groups on the System
+
+To see a list of all groups on the system:
+
+```bash
+getent group
+```
+
+This command outputs all the groups, similar to `cat /etc/group`, but it also includes system groups not listed in `/etc/group` that are provided by other services like LDAP.
+
+These commands give you a comprehensive view of user and group information on your
