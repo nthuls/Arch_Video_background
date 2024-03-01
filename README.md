@@ -75,7 +75,7 @@ After this, log out and back in for the group changes to take effect.
 
 ### Note 
 
-TO CHANGE PERMISSION CHECK THE FILE:()
+TO CHANGE PERMISSION CHECK THE FILE:(https://github.com/nthuls/Arch_Video_background/blob/main/View%20Groups%20and%20more)
 
 TO MAKE IT AN EXECUTABLE WHICH IS MUCH EASIER
 
