@@ -109,12 +109,13 @@ After=graphical.target
 
 [Service]
 Type=forking
-User=yourusername
+User=<username>
 Environment="DISPLAY=:0"
 Environment="XAUTHORITY=/home/<username>/.Xauthority"
 ExecStart=/usr/local/bin/xwinwrap.sh
 Restart=on-failure
 RestartSec=10s
+TimeoutStartSec=infinity
 
 [Install]
 WantedBy=graphical.target
