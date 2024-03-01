@@ -11,14 +11,15 @@ xwinwrap.sh
 
 Make sure to adjust the path to your video file as needed and verify that all dependencies (xwinwrap, mpv, socat, xdotool, zenity) are correctly installed on your system. Also, ensure that the IPC socket directory (/tmp/mpv_sockets) has the correct permissions for your script to create and write to it.
 
-
+```bash
 Run as executable chmod +x xwinwrap.sh
 Then ./xwinwrap.sh
+```
 
-
+```bash
 To run without output use:
 nohup ./xwinwrap.sh &
-
+```
 Running in Background: 
   After integrating these changes, use nohup ./xwinwrap.sh & to run your script in the background.
 
