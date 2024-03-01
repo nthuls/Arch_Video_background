@@ -43,7 +43,7 @@ After=display-manager.service
 
 [Service]
 Type=simple
-User=nthuli
+User=<your usersname>
 ExecStart=/usr/local/bin/xwinwrap.sh
 Restart=on-failure
 RestartSec=10s
@@ -52,7 +52,7 @@ RestartSec=10s
 WantedBy=graphical.target
 ```
 
-Replace `User=nthuli` with your actual username on the system.
+Replace `User=<your usersname>` with your actual username on the system.
 
 3. **Save and exit** the text editor. If you're using `nano`, that would be Ctrl+O, Enter, and then Ctrl+X.
 
