@@ -5,3 +5,8 @@ Make sure to adjust the path to your video file as needed and verify that all de
 
 Run as executable chmod +x xwinwrap.sh
 Then ./xwinwrap.sh
+
+
+To run without output use:
+nohup ./xwinwrap.sh &
+
