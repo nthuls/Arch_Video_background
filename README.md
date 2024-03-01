@@ -98,17 +98,19 @@ sudo nano /etc/systemd/system/xwinwrap.service
 ```ini
 [Unit]
 Description=Xwinwrap Background Video Service
-After=display-manager.service
+After=graphical.target
 
 [Service]
 Type=simple
-User=<your usersname>
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/<username>/.Xauthority"
 ExecStart=/usr/local/bin/xwinwrap.sh
 Restart=on-failure
 RestartSec=10s
 
 [Install]
 WantedBy=graphical.target
+
 ```
 
 Replace `User=<your usersname>` with your actual username on the system.
