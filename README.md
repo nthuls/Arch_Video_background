@@ -22,7 +22,7 @@ Running in Background:
 
 Stopping the Script: 
 
-  Since the script is running in the background, you might want to manage its execution (e.g., stopping it) more     conveniently. Consider saving the background job's PID to a file (echo $! > script.pid) right after starting it. You   can then stop the script using kill $(cat script.pid).
+  Since the script is running in the background, you might want to manage its execution (e.g., stopping it) more     conveniently. Consider saving the background job's PID to a file ```(echo $! > script.pid)``` right after starting it. You   can then stop the script using kill $(cat script.pid).
 
 ADJUSTING PERMISSIONS OF THE FOLDER 
 
