@@ -16,16 +16,16 @@ id
 
 ### 2. Checking Group Membership for Any User
 
-If you want to check the group membership for a specific user, you can use the `groups` or `id` command followed by the username. Replace `nthuli` with the username you're interested in:
+If you want to check the group membership for a specific user, you can use the `groups` or `id` command followed by the username. Replace `<username>` with the username you're interested in:
 
 ```bash
-groups nthuli
+groups <username>
 ```
 
 Or:
 
 ```bash
-id nthuli
+id <username>
 ```
 
 ### 3. Listing All Users and Their Groups
@@ -39,7 +39,7 @@ cat /etc/group
 Or, to search for a specific user or group:
 
 ```bash
-grep 'nthuli' /etc/group
+grep '<username>' /etc/group
 ```
 
 ### 4. Checking User Information
@@ -55,7 +55,7 @@ getent passwd
 For a specific user:
 
 ```bash
-getent passwd nthuli
+getent passwd <username>
 ```
 
 ### 5. Listing All Groups on the System
