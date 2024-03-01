@@ -144,7 +144,12 @@ sudo systemctl enable xwinwrap.service
 ```bash
 sudo systemctl start xwinwrap.service
 ```
+To start the service without blocking your terminal, you can use the & symbol to put the command in the background, or better yet, use the systemctl start command with the --no-block option. This option tells systemctl to return immediately without waiting for the service to start:
 
+```bash
+sudo systemctl start xwinwrap.service --no-block
+```
+This way, you can continue using your terminal without waiting for the service to fully start.
 ### Step 4: Managing the Service
 
 - **To stop the service**, use:
