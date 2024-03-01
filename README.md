@@ -108,7 +108,8 @@ Description=Xwinwrap Background Video Service
 After=graphical.target
 
 [Service]
-Type=simple
+Type=forking
+User=yourusername
 Environment="DISPLAY=:0"
 Environment="XAUTHORITY=/home/<username>/.Xauthority"
 ExecStart=/usr/local/bin/xwinwrap.sh
